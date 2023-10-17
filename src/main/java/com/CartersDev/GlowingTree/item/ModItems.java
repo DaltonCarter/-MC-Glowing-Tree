@@ -14,7 +14,7 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> GLOWINGOAK = ITEMS.register("glowingoak",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
 
 
 
