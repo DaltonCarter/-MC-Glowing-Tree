@@ -1,5 +1,6 @@
 package com.CartersDev.GlowingTree;
 
+import com.CartersDev.GlowingTree.block.ModBlocks;
 import com.CartersDev.GlowingTree.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -33,6 +34,7 @@ public class Tree
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
