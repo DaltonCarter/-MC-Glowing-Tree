@@ -1,5 +1,5 @@
 {
-  "item.glowingtree.glowingoak": "Glowing Oak Sapling",
-  "block.glowingtree.glowing_oak": "Glowing Log",
+  "item.glowingtree.amethyst": "Amethyst",
+  "block.glowingtree.amethyst_ore": "Amethyst Ore",
   "itemGroup.glowingTreeTab": "Glowing Tree"
 }

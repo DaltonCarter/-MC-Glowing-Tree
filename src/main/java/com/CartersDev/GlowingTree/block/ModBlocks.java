@@ -18,11 +18,13 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
 
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Tree.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS
+            = DeferredRegister.create(ForgeRegistries.BLOCKS, Tree.MOD_ID);
 
-    public static final RegistryObject<Block> GLOWING_OAK = registerBlock("glowing_oak",
-            () -> new Block(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(0)
-                    .harvestTool(ToolType.AXE).hardnessAndResistance(2)));
+    public static final RegistryObject<Block> AMETHYST_ORE = registerBlock("amethyst_ore",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool().hardnessAndResistance(5f)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
 
@@ -39,6 +41,7 @@ public class ModBlocks {
     }
 
     public static void register(IEventBus eventBus) {
+
         BLOCKS.register(eventBus);
     }
 
