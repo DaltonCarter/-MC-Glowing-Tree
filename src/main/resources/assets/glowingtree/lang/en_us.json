@@ -1,5 +1,13 @@
 {
   "item.glowingtree.amethyst": "Amethyst",
+  "item.glowingtree.yokarite": "Yokarite",
+  "item.glowingtree.tiberium": "Tiberium",
+  "item.glowingtree.tiberium_blue": "Blue Tiberium",
+
+
   "block.glowingtree.amethyst_ore": "Amethyst Ore",
+  "block.glowingtree.yokarite_ore": "Yokarite Ore",
+  "block.glowingtree.tiberium_ore": "Tiberium Ore",
+
   "itemGroup.glowingTreeTab": "Glowing Tree"
 }

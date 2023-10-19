@@ -17,7 +17,14 @@ public class ModItems {
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst",
             () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
 
+    public static final RegistryObject<Item> YOKARITE = ITEMS.register("yokarite",
+            () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
 
+    public static final RegistryObject<Item> TIBERIUM = ITEMS.register("tiberium",
+            () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> TIBERIUM_BLUE = ITEMS.register("tiberium_blue",
+            () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
 
 
 
