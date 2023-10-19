@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "glowingtree:amethyst"
+    }
+  },
+  "result": {
+    "item": "glowingtree:amethyst_block"
+  }
+}

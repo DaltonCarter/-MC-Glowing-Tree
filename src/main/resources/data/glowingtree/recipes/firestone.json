@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "glowingtree:firestone_block"
+    }
+  ],
+  "result": {
+    "item": "glowingtree:firestone",
+    "count": 9
+  }
+}

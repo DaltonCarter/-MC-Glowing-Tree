@@ -3,11 +3,21 @@
   "item.glowingtree.yokarite": "Yokarite",
   "item.glowingtree.tiberium": "Tiberium",
   "item.glowingtree.tiberium_blue": "Blue Tiberium",
+  "item.glowingtree.firestone": "Firestone",
+
 
 
   "block.glowingtree.amethyst_ore": "Amethyst Ore",
   "block.glowingtree.yokarite_ore": "Yokarite Ore",
   "block.glowingtree.tiberium_ore": "Tiberium Ore",
+  "block.glowingtree.amethyst_block": "Amethyst Block",
+  "block.glowingtree.yokarite_block": "Yokarite Block",
+  "block.glowingtree.tiberium_block": "Tiberium Block",
+  "block.glowingtree.tiberium_blue_block": "Blue Tiberium Block",
+  "block.glowingtree.firestone_block": "Firestone Block",
 
-  "itemGroup.glowingTreeTab": "Glowing Tree"
+  "itemGroup.glowingTreeTab": "Glowing Tree",
+
+  "tooltip.glowingtree.firestone": "Hold \u00A7e SHIFT \u00A7r for more information.",
+  "tooltip.glowingtree.firestone_shift": "Might set you on fire, but might also protect from it!"
 }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "glowingtree:yokarite"
+    }
+  },
+  "result": {
+    "item": "glowingtree:yokarite_block"
+  }
+}

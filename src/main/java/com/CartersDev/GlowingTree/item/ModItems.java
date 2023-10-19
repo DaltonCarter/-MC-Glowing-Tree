@@ -1,6 +1,7 @@
 package com.CartersDev.GlowingTree.item;
 
 import com.CartersDev.GlowingTree.Tree;
+import com.CartersDev.GlowingTree.item.custom.Firestone;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -25,6 +26,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> TIBERIUM_BLUE = ITEMS.register("tiberium_blue",
             () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> FIRESTONE = ITEMS.register("firestone",
+            () -> new Firestone(new Item.Properties().group(ModItemGroup.GLOWING_TREE).maxDamage(8)));
 
 
 

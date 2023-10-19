@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "glowingtree:tiberium_blue"
+    }
+  },
+  "result": {
+    "item": "glowingtree:tiberium_blue_block"
+  }
+}
