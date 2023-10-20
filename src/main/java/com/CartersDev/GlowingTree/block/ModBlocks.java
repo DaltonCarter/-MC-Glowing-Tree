@@ -4,8 +4,7 @@ import com.CartersDev.GlowingTree.Tree;
 import com.CartersDev.GlowingTree.block.custom.FirestoneBlock;
 import com.CartersDev.GlowingTree.item.ModItemGroup;
 import com.CartersDev.GlowingTree.item.ModItems;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -61,6 +60,26 @@ public class ModBlocks {
             () -> new FirestoneBlock(AbstractBlock.Properties.create(Material.IRON)
                     .harvestLevel(2).harvestTool(ToolType.PICKAXE)
                     .setRequiresTool().hardnessAndResistance(5f)));
+
+
+
+public static final RegistryObject<Block> AMETHYST_STAIRS = registerBlock("amethyst_stairs",
+        () -> new StairsBlock(() -> AMETHYST_BLOCK.get().getDefaultState(),
+                AbstractBlock.Properties.create(Material.IRON).harvestLevel(3)
+                        .harvestTool(ToolType.PICKAXE).setRequiresTool()));
+
+    public static final RegistryObject<Block> AMETHYST_FENCE = registerBlock("amethyst_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.IRON)
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool().hardnessAndResistance(5f)));
+
+    public static final RegistryObject<Block> AMETHYST_FENCE_GATE = registerBlock("amethyst_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.IRON)
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool().hardnessAndResistance(5f)));
+
+
+
 
 
 

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "W#W",
+    "W#W"
+  ],
+  "key": {
+    "#": {
+      "item": "glowingtree:amethyst"
+    },
+    "W": {
+      "item": "glowingtree:amethyst_block"
+    }
+  },
+  "result": {
+    "item": "glowingtree:amethyst_fence",
+    "count": 3
+  }
+}

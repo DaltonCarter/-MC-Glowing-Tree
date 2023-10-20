@@ -15,6 +15,10 @@
   "block.glowingtree.tiberium_block": "Tiberium Block",
   "block.glowingtree.tiberium_blue_block": "Blue Tiberium Block",
   "block.glowingtree.firestone_block": "Firestone Block",
+  "block.glowingtree.amethyst_stairs": "Amethyst Stairs",
+  "block.glowingtree.amethyst_fence": "Amethyst Fence",
+  "block.glowingtree.amethyst_fence_gate": "Amethyst Fence Gate",
+
 
   "itemGroup.glowingTreeTab": "Glowing Tree",
 

@@ -85,7 +85,7 @@ public class Firestone extends Item {
     }
 
     private boolean blockIsValidForResistance(BlockState clickedBlock) {
-        return clickedBlock.getBlock() == Blocks.OBSIDIAN;
+        return clickedBlock.isIn(GlowingtreeTags.Blocks.FIRESTONE_CLICKABLE_BLOCKS);
 
 
     }
