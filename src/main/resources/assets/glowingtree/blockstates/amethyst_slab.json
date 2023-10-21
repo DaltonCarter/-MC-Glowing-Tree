@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "glowingtree:block/amethyst_slab"
+    },
+    "type=double": {
+      "model": "glowingtree:block/amethyst_block"
+    },
+    "type=top": {
+      "model": "glowingtree:block/amethyst_slab_top"
+    }
+  }
+}

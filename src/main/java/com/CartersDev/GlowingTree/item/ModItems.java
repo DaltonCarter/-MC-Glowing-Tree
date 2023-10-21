@@ -2,8 +2,8 @@ package com.CartersDev.GlowingTree.item;
 
 import com.CartersDev.GlowingTree.Tree;
 import com.CartersDev.GlowingTree.item.custom.Firestone;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -29,6 +29,49 @@ public class ModItems {
 
     public static final RegistryObject<Item> FIRESTONE = ITEMS.register("firestone",
             () -> new Firestone(new Item.Properties().group(ModItemGroup.GLOWING_TREE).maxDamage(8)));
+
+    public static final RegistryObject<Item> AMETHYST_SWORD = ITEMS.register("amethyst_sword",
+            () -> new SwordItem(ModitemTier.AMETHYST, 2, 3f,
+                    new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> AMETHYST_AXE = ITEMS.register("amethyst_axe",
+            () -> new AxeItem(ModitemTier.AMETHYST, 4, -6f,
+                    new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe",
+            () -> new PickaxeItem(ModitemTier.AMETHYST, 0, -1f,
+                    new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel",
+            () -> new ShovelItem(ModitemTier.AMETHYST, 0, -1f,
+                    new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> AMETHYST_HOE = ITEMS.register("amethyst_hoe",
+            () -> new HoeItem(ModitemTier.AMETHYST, 0, 0f,
+                    new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> AMETHYST_HELMET = ITEMS.register("amethyst_helmet",
+            () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD,
+                    new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> AMETHYST_CHESTPLATE = ITEMS.register("amethyst_chestplate",
+            () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.CHEST,
+                    new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> AMETHYST_LEGGINGS = ITEMS.register("amethyst_leggings",
+            () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.LEGS,
+                    new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> AMETHYST_BOOTS = ITEMS.register("amethyst_boots",
+            () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.FEET,
+                    new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+
+
+
+
+
+
 
 
 

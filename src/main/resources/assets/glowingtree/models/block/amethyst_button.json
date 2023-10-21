@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "glowingtree:block/amethyst_block"
+  }
+}
