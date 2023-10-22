@@ -1,6 +1,7 @@
 package com.CartersDev.GlowingTree.item;
 
 import com.CartersDev.GlowingTree.Tree;
+import com.CartersDev.GlowingTree.block.ModBlocks;
 import com.CartersDev.GlowingTree.item.custom.Firestone;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -65,6 +66,11 @@ public class ModItems {
     public static final RegistryObject<Item> AMETHYST_BOOTS = ITEMS.register("amethyst_boots",
             () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.FEET,
                     new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> OATS = ITEMS.register("oats",
+            () -> new BlockItem(ModBlocks.OATS.get(), new Item.Properties()
+                    .food(new Food.Builder().hunger(1).saturation(0.1f).fastToEat()
+                            .build()).group(ModItemGroup.GLOWING_TREE)));
 
 
 

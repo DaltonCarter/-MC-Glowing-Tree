@@ -2,6 +2,7 @@ package com.CartersDev.GlowingTree.block;
 
 import com.CartersDev.GlowingTree.Tree;
 import com.CartersDev.GlowingTree.block.custom.FirestoneBlock;
+import com.CartersDev.GlowingTree.block.custom.OatsBlock;
 import com.CartersDev.GlowingTree.item.ModItemGroup;
 import com.CartersDev.GlowingTree.item.ModItems;
 import net.minecraft.block.*;
@@ -26,34 +27,10 @@ public class ModBlocks {
                     .harvestLevel(2).harvestTool(ToolType.PICKAXE)
                     .setRequiresTool().hardnessAndResistance(5f)));
 
-    public static final RegistryObject<Block> YOKARITE_ORE = registerBlock("yokarite_ore",
-            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
-                    .harvestLevel(2).harvestTool(ToolType.PICKAXE)
-                    .setRequiresTool().hardnessAndResistance(5f)));
-
-    public static final RegistryObject<Block> TIBERIUM_ORE = registerBlock("tiberium_ore",
-            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
-                    .harvestLevel(3).harvestTool(ToolType.PICKAXE)
-                    .setRequiresTool().hardnessAndResistance(5f)));
-
-    public static final RegistryObject<Block> YOKARITE_BLOCK = registerBlock("yokarite_block",
-            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
-                    .harvestLevel(2).harvestTool(ToolType.PICKAXE)
-                    .setRequiresTool().hardnessAndResistance(5f)));
 
     public static final RegistryObject<Block> AMETHYST_BLOCK = registerBlock("amethyst_block",
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
                     .harvestLevel(2).harvestTool(ToolType.PICKAXE)
-                    .setRequiresTool().hardnessAndResistance(5f)));
-
-    public static final RegistryObject<Block> TIBERIUM_BLOCK = registerBlock("tiberium_block",
-            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
-                    .harvestLevel(3).harvestTool(ToolType.PICKAXE)
-                    .setRequiresTool().hardnessAndResistance(5f)));
-
-    public static final RegistryObject<Block> TIBERIUM_BLUE_BLOCK = registerBlock("tiberium_blue_block",
-            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
-                    .harvestLevel(3).harvestTool(ToolType.PICKAXE)
                     .setRequiresTool().hardnessAndResistance(5f)));
 
     public static final RegistryObject<Block> FIRESTONE_BLOCK = registerBlock("firestone_block",
@@ -94,7 +71,81 @@ public static final RegistryObject<Block> AMETHYST_STAIRS = registerBlock("ameth
                     .create(Material.IRON).harvestLevel(2).harvestTool(ToolType.PICKAXE)
                     .setRequiresTool().hardnessAndResistance(5f)));
 
+    public static final RegistryObject<Block> AMETHYST_DOOR = registerBlock("amethyst_door",
+            () -> new DoorBlock( AbstractBlock.Properties.create(Material.IRON).harvestLevel(2)
+                    .harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f)
+                    .notSolid()));
 
+    public static final RegistryObject<Block> AMETHYST_TRAPDOOR = registerBlock("amethyst_trapdoor",
+            () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.IRON).harvestLevel(2)
+                    .harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f)
+                    .notSolid()));
+
+    public static final RegistryObject<Block> OATS = BLOCKS.register("oats_crop",
+         () -> new OatsBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> REDWOOD_LOG = registerBlock("redwood_log",
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_LOG))));
+
+    public static final RegistryObject<Block> REDWOOD_WOOD = registerBlock("redwood_wood",
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_WOOD))));
+
+    public static final RegistryObject<Block> STRIPPED_REDWOOD_LOG = registerBlock("stripped_redwood_log",
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_LOG))));
+
+    public static final RegistryObject<Block> STRIPPED_REDWOOD_WOOD = registerBlock("stripped_redwood_wood",
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_LOG))));
+
+    public static final RegistryObject<Block> REDWOOD_PLANKS = registerBlock("redwood_planks",
+            () -> new Block((AbstractBlock.Properties.from(Blocks.OAK_PLANKS))));
+
+
+    //Off Tutorial Blocks
+
+    public static final RegistryObject<Block> YOKARITE_ORE = registerBlock("yokarite_ore",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool().hardnessAndResistance(5f)));
+
+    public static final RegistryObject<Block> TIBERIUM_ORE = registerBlock("tiberium_ore",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
+                    .harvestLevel(3).harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool().hardnessAndResistance(5f)));
+
+    public static final RegistryObject<Block> YOKARITE_BLOCK = registerBlock("yokarite_block",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool().hardnessAndResistance(5f)));
+
+    public static final RegistryObject<Block> TIBERIUM_BLOCK = registerBlock("tiberium_block",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
+                    .harvestLevel(3).harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool().hardnessAndResistance(5f)));
+
+    public static final RegistryObject<Block> TIBERIUM_BLUE_BLOCK = registerBlock("tiberium_blue_block",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
+                    .harvestLevel(3).harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool().hardnessAndResistance(5f)));
+
+    //end Off Tutorial Blocks
+
+    //Glowing Tree
+    public static final RegistryObject<Block> GLOWWOOD_LOG = registerBlock("glowwood_log",
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_LOG))));
+
+    public static final RegistryObject<Block> GLOWWOOD_WOOD = registerBlock("glowwood_wood",
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_WOOD))));
+
+    public static final RegistryObject<Block> STRIPPED_GLOWWOOD_LOG = registerBlock("stripped_glowwood_log",
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_LOG))));
+
+    public static final RegistryObject<Block> STRIPPED_GLOWWOOD_WOOD = registerBlock("stripped_glowwood_wood",
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_LOG))));
+
+    public static final RegistryObject<Block> GLOWWOOD_PLANKS = registerBlock("glowwood_planks",
+            () -> new Block((AbstractBlock.Properties.from(Blocks.OAK_PLANKS))));
+
+    //end Glowing Tree
 
 
 

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom",
+  "textures": {
+    "top": "glowingtree:block/amethyst_door_top",
+    "bottom": "glowingtree:block/amethyst_door_bottom"
+  }
+}
