@@ -12,6 +12,9 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.trees.OakTree;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.util.Direction;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockReader;
 import net.minecraft.world.LightType;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -92,24 +95,84 @@ public static final RegistryObject<Block> AMETHYST_STAIRS = registerBlock("ameth
          () -> new OatsBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
 
     public static final RegistryObject<Block> REDWOOD_LOG = registerBlock("redwood_log",
-            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_LOG))));
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.OAK_LOG)) {
+                @Override
+                public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            });
 
     public static final RegistryObject<Block> REDWOOD_WOOD = registerBlock("redwood_wood",
-            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_WOOD))));
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.OAK_WOOD)) {
+                @Override
+                public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            });
 
     public static final RegistryObject<Block> STRIPPED_REDWOOD_LOG = registerBlock("stripped_redwood_log",
-            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_LOG))));
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_LOG)) {
+                @Override
+                public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            });
 
     public static final RegistryObject<Block> STRIPPED_REDWOOD_WOOD = registerBlock("stripped_redwood_wood",
-            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_LOG))));
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_WOOD)) {
+                @Override
+                public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            });
 
     public static final RegistryObject<Block> REDWOOD_PLANKS = registerBlock("redwood_planks",
-            () -> new Block((AbstractBlock.Properties.from(Blocks.OAK_PLANKS))));
+            () -> new Block(AbstractBlock.Properties.from(Blocks.OAK_PLANKS)) {
+                @Override
+                public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            });
 
     public static final RegistryObject<Block> REDWOOD_LEAVES = registerBlock("redwood_leaves",
             () -> new LeavesBlock((AbstractBlock.Properties.create(Material.LEAVES)
                     .hardnessAndResistance(0.2f).tickRandomly().sound(SoundType.PLANT)
-                    .notSolid())));
+                    .notSolid())) {
+                @Override
+                public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            });
 
     public static final RegistryObject<Block> REDWOOD_SAPLING = registerBlock("redwood_sapling",
             () -> new SaplingBlock(new RedwoodTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));
@@ -145,28 +208,92 @@ public static final RegistryObject<Block> AMETHYST_STAIRS = registerBlock("ameth
     //end Off Tutorial Blocks
 
     //Glowing Tree
+
     public static final RegistryObject<Block> GLOWWOOD_LOG = registerBlock("glowwood_log",
             () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_LOG)
-                    .setLightLevel(glowLog))));
+                    .setLightLevel(glowLog)))
+            {
+                @Override
+                public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            });
 
     public static final RegistryObject<Block> GLOWWOOD_WOOD = registerBlock("glowwood_wood",
-            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_WOOD).setLightLevel(glowLog))));
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_WOOD).setLightLevel(glowLog)))
+            {
+                @Override
+                public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            });
 
     public static final RegistryObject<Block> STRIPPED_GLOWWOOD_LOG = registerBlock("stripped_glowwood_log",
-            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_LOG))));
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_LOG)))
+            {
+                @Override
+                public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            });
 
     public static final RegistryObject<Block> STRIPPED_GLOWWOOD_WOOD = registerBlock("stripped_glowwood_wood",
-            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_LOG))));
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_WOOD)))
+            {
+                @Override
+                public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
 
-    public static final RegistryObject<Block> GLOWWOOD_PLANKS = registerBlock("glowwood_planks",
-            () -> { return new Block((AbstractBlock.Properties.from(Blocks.OAK_PLANKS)));
-
+                @Override
+                public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
             });
+
+public static final RegistryObject<Block> GLOWWOOD_PLANKS = registerBlock("glowwood_planks",
+        () -> new Block(AbstractBlock.Properties.from(Blocks.OAK_PLANKS)) {
+            @Override
+            public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                return 5;
+            }
+
+            @Override
+            public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                return 5;
+            }
+        });
 
     public static final RegistryObject<Block> GLOWWOOD_LEAVES = registerBlock("glowwood_leaves",
             () -> new LeavesBlock((AbstractBlock.Properties.create(Material.LEAVES)
                     .hardnessAndResistance(0.2f).tickRandomly().sound(SoundType.PLANT)
-                    .notSolid().setLightLevel(glowLog))));
+                    .notSolid().setLightLevel(glowLog)))
+            {
+                @Override
+                public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+                    return 5;
+                }
+            });
 
     public static final RegistryObject<Block> GLOWWOOD_SAPLING = registerBlock("glowwood_sapling",
             () -> new SaplingBlock(new GlowwoodTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)
