@@ -19,15 +19,6 @@ public class ModItems {
     public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst",
             () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
 
-    public static final RegistryObject<Item> YOKARITE = ITEMS.register("yokarite",
-            () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
-
-    public static final RegistryObject<Item> TIBERIUM = ITEMS.register("tiberium",
-            () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
-
-    public static final RegistryObject<Item> TIBERIUM_BLUE = ITEMS.register("tiberium_blue",
-            () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
-
     public static final RegistryObject<Item> FIRESTONE = ITEMS.register("firestone",
             () -> new Firestone(new Item.Properties().group(ModItemGroup.GLOWING_TREE).maxDamage(8)));
 
@@ -71,6 +62,26 @@ public class ModItems {
             () -> new BlockItem(ModBlocks.OATS.get(), new Item.Properties()
                     .food(new Food.Builder().hunger(1).saturation(0.1f).fastToEat()
                             .build()).group(ModItemGroup.GLOWING_TREE)));
+
+
+
+
+
+
+
+    //My Custom Items
+
+    public static final RegistryObject<Item> YOKARITE = ITEMS.register("yokarite",
+            () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> TIBERIUM = ITEMS.register("tiberium",
+            () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> TIBERIUM_BLUE = ITEMS.register("tiberium_blue",
+            () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+
+    //end custom Itmes
 
 
 

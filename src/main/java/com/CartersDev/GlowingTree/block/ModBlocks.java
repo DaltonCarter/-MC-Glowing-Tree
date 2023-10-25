@@ -3,12 +3,16 @@ package com.CartersDev.GlowingTree.block;
 import com.CartersDev.GlowingTree.Tree;
 import com.CartersDev.GlowingTree.block.custom.FirestoneBlock;
 import com.CartersDev.GlowingTree.block.custom.OatsBlock;
+import com.CartersDev.GlowingTree.block.custom.Trees.GlowwoodTree;
+import com.CartersDev.GlowingTree.block.custom.Trees.RedwoodTree;
 import com.CartersDev.GlowingTree.item.ModItemGroup;
 import com.CartersDev.GlowingTree.item.ModItems;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.trees.OakTree;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.world.LightType;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -16,8 +20,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
+import java.util.function.ToIntFunction;
 
 public class ModBlocks {
+
+    public static ToIntFunction<BlockState> glowLog = BlockState -> 7;
 
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, Tree.MOD_ID);
@@ -99,6 +106,14 @@ public static final RegistryObject<Block> AMETHYST_STAIRS = registerBlock("ameth
     public static final RegistryObject<Block> REDWOOD_PLANKS = registerBlock("redwood_planks",
             () -> new Block((AbstractBlock.Properties.from(Blocks.OAK_PLANKS))));
 
+    public static final RegistryObject<Block> REDWOOD_LEAVES = registerBlock("redwood_leaves",
+            () -> new LeavesBlock((AbstractBlock.Properties.create(Material.LEAVES)
+                    .hardnessAndResistance(0.2f).tickRandomly().sound(SoundType.PLANT)
+                    .notSolid())));
+
+    public static final RegistryObject<Block> REDWOOD_SAPLING = registerBlock("redwood_sapling",
+            () -> new SaplingBlock(new RedwoodTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));
+
 
     //Off Tutorial Blocks
 
@@ -131,10 +146,11 @@ public static final RegistryObject<Block> AMETHYST_STAIRS = registerBlock("ameth
 
     //Glowing Tree
     public static final RegistryObject<Block> GLOWWOOD_LOG = registerBlock("glowwood_log",
-            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_LOG))));
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_LOG)
+                    .setLightLevel(glowLog))));
 
     public static final RegistryObject<Block> GLOWWOOD_WOOD = registerBlock("glowwood_wood",
-            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_WOOD))));
+            () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_WOOD).setLightLevel(glowLog))));
 
     public static final RegistryObject<Block> STRIPPED_GLOWWOOD_LOG = registerBlock("stripped_glowwood_log",
             () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_LOG))));
@@ -143,7 +159,21 @@ public static final RegistryObject<Block> AMETHYST_STAIRS = registerBlock("ameth
             () -> new RotatedPillarBlock((AbstractBlock.Properties.from(Blocks.OAK_LOG))));
 
     public static final RegistryObject<Block> GLOWWOOD_PLANKS = registerBlock("glowwood_planks",
-            () -> new Block((AbstractBlock.Properties.from(Blocks.OAK_PLANKS))));
+            () -> { return new Block((AbstractBlock.Properties.from(Blocks.OAK_PLANKS)));
+
+            });
+
+    public static final RegistryObject<Block> GLOWWOOD_LEAVES = registerBlock("glowwood_leaves",
+            () -> new LeavesBlock((AbstractBlock.Properties.create(Material.LEAVES)
+                    .hardnessAndResistance(0.2f).tickRandomly().sound(SoundType.PLANT)
+                    .notSolid().setLightLevel(glowLog))));
+
+    public static final RegistryObject<Block> GLOWWOOD_SAPLING = registerBlock("glowwood_sapling",
+            () -> new SaplingBlock(new GlowwoodTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)
+                    .setLightLevel(glowLog)));
+
+
+
 
     //end Glowing Tree
 

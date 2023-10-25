@@ -71,7 +71,14 @@ public class Tree
         event.enqueueWork(() -> {
             RenderTypeLookup.setRenderLayer(ModBlocks.AMETHYST_DOOR.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.AMETHYST_TRAPDOOR.get(), RenderType.getCutout());
+
             RenderTypeLookup.setRenderLayer(ModBlocks.OATS.get(), RenderType.getCutout());
+
+            RenderTypeLookup.setRenderLayer(ModBlocks.REDWOOD_LEAVES.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(ModBlocks.REDWOOD_SAPLING.get(), RenderType.getCutout());
+
+            RenderTypeLookup.setRenderLayer(ModBlocks.GLOWWOOD_LEAVES.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(ModBlocks.GLOWWOOD_SAPLING.get(), RenderType.getCutout());
 
         });
     }
