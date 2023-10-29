@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "glowingtree:block/glowwood_planks",
+    "top": "glowingtree:block/glowwood_planks",
+    "side": "glowingtree:block/glowwood_planks"
+  }
+}

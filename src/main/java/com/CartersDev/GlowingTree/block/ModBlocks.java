@@ -299,7 +299,10 @@ public static final RegistryObject<Block> GLOWWOOD_PLANKS = registerBlock("gloww
             () -> new SaplingBlock(new GlowwoodTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)
                     .setLightLevel(glowLog)));
 
-
+    public static final RegistryObject<Block> GLOWWOOD_SLAB = registerBlock("glowwood_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(2).harvestTool(ToolType.AXE)
+                    .setRequiresTool().hardnessAndResistance(5f)));
 
 
     //end Glowing Tree

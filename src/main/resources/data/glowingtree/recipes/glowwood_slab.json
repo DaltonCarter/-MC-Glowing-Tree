@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "glowingtree:glowingtree_planks"
+    }
+  },
+  "result": {
+    "item": "glowingtree:glowingtree_slab",
+    "count": 6
+  }
+}
