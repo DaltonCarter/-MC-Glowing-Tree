@@ -6,7 +6,7 @@ import net.minecraftforge.common.util.Lazy;
 
 public enum OreType {
 
-    AMETHYST(Lazy.of(ModBlocks.AMETHYST_ORE), 8, 25, 50);
+    AMETHYST(Lazy.of(ModBlocks.AMETHYST_ORE),8,25,50);
 
     private final Lazy<Block> block;
     private final int maxVeinSize;
@@ -14,7 +14,7 @@ public enum OreType {
     private final int maxHeight;
 
 
-    OreType(Lazy<Block> block, int maxVeinSize, int minHeight, int maxHeight) {
+   OreType(Lazy<Block> block, int maxVeinSize, int minHeight, int maxHeight) {
         this.block = block;
         this.maxVeinSize = maxVeinSize;
         this.minHeight = minHeight;
@@ -37,13 +37,14 @@ public enum OreType {
         return maxHeight;
     }
 
-public static OreType get(Block block) {
-        for (OreType ore : values()) {
-            if(block == ore.block){
-                return ore;
-            }
-        }
-        return null;
-}
+    public static OreType get(Block block) {
+       for (OreType ore : values()) {
+           if(block == ore.block) {
+               return ore;
+           }
+
+       }
+       return null;
+    }
 
 }
