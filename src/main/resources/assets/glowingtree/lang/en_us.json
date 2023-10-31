@@ -13,7 +13,10 @@
   "item.glowingtree.amethyst_chestplate": "Amethyst Chestplate",
   "item.glowingtree.amethyst_leggings": "Amethyst Leggings",
   "item.glowingtree.amethyst_boots": "Amethyst Boots",
-
+  "item.glowingtree.glowwood_sword" : "Glow-Wood Sword",
+  "item.glowingtree.glowwood_pickaxe" : "Glow-Wood PickAxe",
+  "item.glowingtree.glowwood_axe" : "Glow-Wood Axe",
+  "item.glowingtree.glowwood_stick" : "Glow-Wood Stick",
 
   "block.glowingtree.amethyst_ore": "Amethyst Ore",
   "block.glowingtree.yokarite_ore": "Yokarite Ore",
@@ -46,7 +49,7 @@
   "block.glowingtree.glowwood_sapling": "Glow-Wood Sapling",
   "block.glowingtree.redwood_leaves": "Redwood Leaves",
   "block.glowingtree.redwood_sapling": "Redwood Sapling",
-  "block.glowingtree.glowwood_slab": "Glowing Tree Slab",
+  "block.glowingtree.glowwood_slab": "Glow-Wood Slab",
 
 
 
