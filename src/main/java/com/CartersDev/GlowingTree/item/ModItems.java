@@ -67,6 +67,32 @@ public class ModItems {
 
 
 
+    //GlowWood Tools
+
+    public static final RegistryObject<Item> GLOWWOOD_SWORD = ITEMS.register("glowwood_sword",
+            () -> new SwordItem(ModitemTier.AMETHYST, 2, 3f,
+                    new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> GLOWWOOD_AXE = ITEMS.register("glowwood_axe",
+            () -> new AxeItem(ModitemTier.AMETHYST, 4, -6f,
+                    new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> GLOWWOOD_PICKAXE = ITEMS.register("glowwood_pickaxe",
+            () -> new PickaxeItem(ModitemTier.AMETHYST, 0, -1f,
+                    new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> GLOWWOOD_SHOVEL = ITEMS.register("glowwood_shovel",
+            () -> new ShovelItem(ModitemTier.AMETHYST, 0, -1f,
+                    new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> GLOWWOOD_STICK = ITEMS.register("glowwood_stick",
+            () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
+
+
+    //End of GlowWood Tools
+
+
 
 
     //My Custom Items
@@ -83,27 +109,7 @@ public class ModItems {
 
     //end custom Itmes
 
-    //GlowWood Tools
 
-    public static final RegistryObject<Item> GLOWWOOD_SWORD = ITEMS.register("glowwood_sword",
-            () -> new SwordItem(ModitemTier.AMETHYST, 2, 3f,
-                    new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
-
-    public static final RegistryObject<Item> GLOWWOOD_AXE = ITEMS.register("glowwood_axe",
-            () -> new AxeItem(ModitemTier.AMETHYST, 4, -6f,
-                    new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
-
-    public static final RegistryObject<Item> GLOWWOOD_PICKAXE = ITEMS.register("glowwood_pickaxe",
-            () -> new PickaxeItem(ModitemTier.AMETHYST, 0, -1f,
-                    new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
-
-
-    public static final RegistryObject<Item> GLOWWOOD_STICK = ITEMS.register("glowwood_stick",
-            () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
-
-
-
-    //End of GlowWood Tools
 
 
 
