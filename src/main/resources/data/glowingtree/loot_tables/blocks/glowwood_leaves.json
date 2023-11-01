@@ -145,7 +145,7 @@
               ]
             }
           ],
-          "name": "minecraft:glowstone_dust"
+          "name": "glowingtree:glowwood_sap"
         }
       ],
       "conditions": [

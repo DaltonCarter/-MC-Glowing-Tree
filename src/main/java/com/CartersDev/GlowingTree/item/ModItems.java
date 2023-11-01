@@ -92,6 +92,8 @@ public class ModItems {
     public static final RegistryObject<Item> GLOWWOOD_STICK = ITEMS.register("glowwood_stick",
             () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
 
+    public static final RegistryObject<Item> GLOWWOOD_SAP = ITEMS.register("glowwood_sap",
+            () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
 
 
     //End of GlowWood Tools
