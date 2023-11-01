@@ -25,7 +25,7 @@ public class ModConfiguredFeatures {
                             new SimpleBlockStateProvider(ModBlocks.GLOWWOOD_LOG.get().getDefaultState()),
                             new SimpleBlockStateProvider(ModBlocks.GLOWWOOD_LEAVES.get().getDefaultState()),
                             new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                            new StraightTrunkPlacer(5, 4, 3),
+                            new StraightTrunkPlacer(3, 4, 3),
                             new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
