@@ -85,6 +85,10 @@ public class ModItems {
             () -> new ShovelItem(ModitemTier.AMETHYST, 0, -1f,
                     new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
 
+    public static final RegistryObject<Item> GLOWWOOD_HOE = ITEMS.register("glowwood_hoe",
+            () -> new HoeItem(ModitemTier.AMETHYST, 0, 0f,
+                    new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
+
     public static final RegistryObject<Item> GLOWWOOD_STICK = ITEMS.register("glowwood_stick",
             () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
 
