@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "glowingtree:item/glowwood_shovel"
+    "layer0": "glowingtree:item/amethyst_shovel"
   }
 }
