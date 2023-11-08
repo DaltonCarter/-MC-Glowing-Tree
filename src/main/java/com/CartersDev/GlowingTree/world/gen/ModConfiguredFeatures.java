@@ -31,8 +31,8 @@ public class ModConfiguredFeatures {
                             new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     public static final ConfiguredFeature<?, ?> HYACINTH_CONFIG =  Feature.FLOWER.withConfiguration((
-            new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModBlocks.HYACINTH.get().getDefaultState()
-            ), SimpleBlockPlacer.PLACER)).tries(12).build())
+                    new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModBlocks.HYACINTH.get().getDefaultState()
+                    ), SimpleBlockPlacer.PLACER)).tries(12).build())
             .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5);
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?>
