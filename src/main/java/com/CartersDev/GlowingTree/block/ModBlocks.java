@@ -12,6 +12,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.trees.OakTree;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.potion.Effects;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
@@ -177,6 +178,9 @@ public static final RegistryObject<Block> AMETHYST_STAIRS = registerBlock("ameth
     public static final RegistryObject<Block> REDWOOD_SAPLING = registerBlock("redwood_sapling",
             () -> new SaplingBlock(new RedwoodTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));
 
+    public static final RegistryObject<Block> HYACINTH = registerBlock("hyacinth",
+            () -> new FlowerBlock(Effects.HASTE, 2, AbstractBlock.Properties.from(Blocks.DANDELION)));
+
 
     //Off Tutorial Blocks
 
@@ -204,6 +208,9 @@ public static final RegistryObject<Block> AMETHYST_STAIRS = registerBlock("ameth
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
                     .harvestLevel(3).harvestTool(ToolType.PICKAXE)
                     .setRequiresTool().hardnessAndResistance(5f)));
+
+    public static final RegistryObject<Block> FLOWER_OF_LIFE = registerBlock("flower_of_life",
+            () -> new FlowerBlock(Effects.REGENERATION, 2, AbstractBlock.Properties.from(Blocks.DANDELION)));
 
     //end Off Tutorial Blocks
 

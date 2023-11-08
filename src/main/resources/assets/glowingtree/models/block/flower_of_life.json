@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "glowingtree:block/flower_of_life"
+  }
+}

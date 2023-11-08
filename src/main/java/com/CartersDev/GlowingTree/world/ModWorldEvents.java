@@ -1,6 +1,7 @@
 package com.CartersDev.GlowingTree.world;
 
 import com.CartersDev.GlowingTree.Tree;
+import com.CartersDev.GlowingTree.world.gen.ModFlowerGeneration;
 import com.CartersDev.GlowingTree.world.gen.ModOreGeneration;
 import com.CartersDev.GlowingTree.world.gen.ModTreeGeneration;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
@@ -15,6 +16,8 @@ public class ModWorldEvents {
     public static void biomeLoadingEvent(final BiomeLoadingEvent event) {
 
         ModOreGeneration.generateOres(event);
+
+        ModFlowerGeneration.generateFlowers(event);
         ModTreeGeneration.generateTrees(event);
 
     }
