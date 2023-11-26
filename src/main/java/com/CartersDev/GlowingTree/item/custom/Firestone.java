@@ -38,7 +38,7 @@ public class Firestone extends Item {
     public ActionResultType onItemUseFirst(ItemStack stack, ItemUseContext context) {
         World world = context.getWorld();
 
-        if(!world.isRemote) {
+        if (!world.isRemote) {
             PlayerEntity playerEntity = Objects.requireNonNull(context.getPlayer());
             BlockState clickedBlock = world.getBlockState(context.getPos());
 
@@ -53,13 +53,11 @@ public class Firestone extends Item {
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
 
-        if(Screen.hasShiftDown()) {
+        if (Screen.hasShiftDown()) {
             tooltip.add(new TranslationTextComponent("tooltip.glowingtree.firestone_shift"));
-        }else {
+        } else {
             tooltip.add(new TranslationTextComponent("tooltip.glowingtree.firestone"));
         }
-
-
 
 
         super.addInformation(stack, worldIn, tooltip, flagIn);
@@ -71,15 +69,14 @@ public class Firestone extends Item {
         boolean playerIsNotOnFire = !playerEntity.isBurning();
 
 
-
-        if(random.nextFloat() > 0.5f){
+        if (random.nextFloat() > 0.5f) {
             lightEntityOnFire(playerEntity, 6);
 
         } else if (playerIsNotOnFire && blockIsValidForResistance(clickedBlock)) {
             gainFireResistanceAndDestroyBlock(playerEntity, context.getWorld(), context.getPos());
 
         } else {
-           lightGroundOnFire(context);
+            lightGroundOnFire(context);
         }
 
     }
@@ -90,7 +87,7 @@ public class Firestone extends Item {
 
     }
 
-    public static void lightEntityOnFire(Entity entity, int second){
+    public static void lightEntityOnFire(Entity entity, int second) {
         entity.setFire(second);
     }
 
@@ -116,18 +113,18 @@ public class Firestone extends Item {
             world.setBlockState(blockpos, blockstate, 11);
 
 
-    }
+        }
 
-}
+    }
 
     @Override
     public ItemStack getContainerItem(ItemStack itemStack) {
-         ItemStack container = itemStack.copy();
-         if(container.attemptDamageItem(1, random, null)) {
-             return ItemStack.EMPTY;
-         }else {
-             return container;
-         }
+        ItemStack container = itemStack.copy();
+        if(container.attemptDamageItem(1, random, null)) {
+            return ItemStack.EMPTY;
+        } else {
+            return container;
+        }
     }
 
     @Override
