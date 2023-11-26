@@ -47,4 +47,8 @@ public class FirestoneBlock extends Block {
         Firestone.lightEntityOnFire(entityIn, 5);
         super.onEntityWalk(worldIn, pos, entityIn);
     }
+
+
+
+
 }
