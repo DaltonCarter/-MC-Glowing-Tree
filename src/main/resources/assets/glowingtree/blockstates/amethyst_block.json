@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "glowingtree:block/amethyst_block" }
+    "": { "model": "glowingtrees:block/amethyst_block" }
   }
 }
