@@ -1,15 +1,21 @@
 package com.CartersDev.GlowingTree.tileentity;
 
 import com.CartersDev.GlowingTree.item.ModItems;
+import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
+import net.minecraft.util.Direction;
+import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public class LightningChannelerTile extends TileEntity {
 
@@ -59,4 +65,46 @@ public class LightningChannelerTile extends TileEntity {
 
         };
     }
+
+    public LightningChannelerTile() {
+        this(ModTileEntities.LIGHTNING_CHANNELER_TILE.get());
+    }
+
+    @Override
+    public void read(BlockState state, CompoundNBT nbt) {
+        itemHandler.deserializeNBT(nbt.getCompound("inv"));
+        super.read(state, nbt);
+    }
+
+    @Override
+    public CompoundNBT write(CompoundNBT compound) {
+        compound.put("inv", itemHandler.serializeNBT());
+        return super.write(compound);
+    }
+
+    @Nonnull
+    @Override
+    public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @Nullable Direction side) {
+        if(cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY){
+            return handler.cast();
+        }
+        return super.getCapability(cap, side);
+    }
+
+
+    public void lightningHasStruck() {
+        boolean hasFocusInFirstSlot = this.itemHandler.getStackInSlot(0).getCount() > 0
+                && this.itemHandler.getStackInSlot(0).getItem() == Items.GLASS_PANE;
+
+        boolean hasAmethystInSecondSlot = this.itemHandler.getStackInSlot(1).getCount() > 0
+                && this.itemHandler.getStackInSlot(1).getItem() == ModItems.AMETHYST.get();
+
+        if(hasFocusInFirstSlot && hasAmethystInSecondSlot) {
+            this.itemHandler.getStackInSlot(0).shrink(1);
+            this.itemHandler.getStackInSlot(1).shrink(1);
+
+            this.itemHandler.insertItem(1, new ItemStack(ModItems.FIRESTONE.get()), false);
+        }
+    }
+
 }

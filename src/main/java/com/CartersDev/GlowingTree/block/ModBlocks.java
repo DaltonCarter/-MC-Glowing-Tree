@@ -181,6 +181,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> HYACINTH = registerBlock("hyacinth",
             () -> new FlowerBlock(Effects.HASTE, 2, AbstractBlock.Properties.from(Blocks.DANDELION)));
 
+    public static final RegistryObject<Block> LIGHTNING_CHANNELER = registerBlock("lightning_channerler",
+            () -> new Block(AbstractBlock.Properties.create(Material.IRON)));
+
 
     //Off Tutorial Blocks
 
