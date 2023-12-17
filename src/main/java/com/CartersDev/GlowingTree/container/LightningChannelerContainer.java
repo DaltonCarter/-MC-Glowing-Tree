@@ -4,7 +4,6 @@ import com.CartersDev.GlowingTree.block.ModBlocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
-import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IWorldPosCallable;
 import net.minecraft.util.math.BlockPos;
@@ -14,17 +13,15 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
-import javax.annotation.Nullable;
-
-public class LightningChannerlerContainer extends Container {
+public class LightningChannelerContainer extends Container {
 
     private final TileEntity tileEntity;
     private final PlayerEntity playerEntity;
     private final IItemHandler playerInventory;
 
 
-    public LightningChannerlerContainer(int windowId, World world, BlockPos pos,
-                                         PlayerInventory playerInventory, PlayerEntity player) {
+    public LightningChannelerContainer(int windowId, World world, BlockPos pos,
+                                       PlayerInventory playerInventory, PlayerEntity player) {
         super(type, windowId);
         this.tileEntity = world.getTileEntity(pos);
         playerEntity = player;
