@@ -2,7 +2,6 @@ package com.CartersDev.GlowingTree.tileentity;
 
 import com.CartersDev.GlowingTree.Tree;
 import com.CartersDev.GlowingTree.block.ModBlocks;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;

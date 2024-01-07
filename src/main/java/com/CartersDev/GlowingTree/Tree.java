@@ -1,6 +1,7 @@
 package com.CartersDev.GlowingTree;
 
 import com.CartersDev.GlowingTree.block.ModBlocks;
+import com.CartersDev.GlowingTree.container.ModContainers;
 import com.CartersDev.GlowingTree.item.ModItems;
 import com.CartersDev.GlowingTree.tileentity.ModTileEntities;
 import com.google.common.collect.ImmutableMap;
@@ -41,6 +42,7 @@ public class Tree
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
         ModTileEntities.register(eventBus);
+        ModContainers.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
