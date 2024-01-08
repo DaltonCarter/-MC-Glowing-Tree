@@ -24,7 +24,7 @@ public class LightningChannelerContainer extends Container {
 
     public LightningChannelerContainer(int windowId, World world, BlockPos pos,
                                        PlayerInventory playerInventory, PlayerEntity player) {
-        super(type, windowId);
+        super(ModContainers.LIGHTNING_CHANNELER_CONTAINER.get(), windowId);
         this.tileEntity = world.getTileEntity(pos);
         playerEntity = player;
         this.playerInventory = new InvWrapper(playerInventory);
