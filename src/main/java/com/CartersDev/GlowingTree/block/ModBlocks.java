@@ -2,6 +2,7 @@ package com.CartersDev.GlowingTree.block;
 
 import com.CartersDev.GlowingTree.Tree;
 import com.CartersDev.GlowingTree.block.custom.FirestoneBlock;
+import com.CartersDev.GlowingTree.block.custom.LightningChannelerBlock;
 import com.CartersDev.GlowingTree.block.custom.OatsBlock;
 import com.CartersDev.GlowingTree.block.custom.Trees.GlowwoodTree;
 import com.CartersDev.GlowingTree.block.custom.Trees.RedwoodTree;
@@ -182,7 +183,7 @@ public class ModBlocks {
             () -> new FlowerBlock(Effects.HASTE, 2, AbstractBlock.Properties.from(Blocks.DANDELION)));
 
     public static final RegistryObject<Block> LIGHTNING_CHANNELER = registerBlock("lightning_channerler",
-            () -> new Block(AbstractBlock.Properties.create(Material.IRON)));
+            () -> new LightningChannelerBlock(AbstractBlock.Properties.create(Material.IRON)));
 
 
     //Off Tutorial Blocks

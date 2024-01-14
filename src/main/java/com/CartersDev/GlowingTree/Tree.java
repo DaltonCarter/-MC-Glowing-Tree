@@ -3,10 +3,12 @@ package com.CartersDev.GlowingTree;
 import com.CartersDev.GlowingTree.block.ModBlocks;
 import com.CartersDev.GlowingTree.container.ModContainers;
 import com.CartersDev.GlowingTree.item.ModItems;
+import com.CartersDev.GlowingTree.screen.LightningChannelerScreen;
 import com.CartersDev.GlowingTree.tileentity.ModTileEntities;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.AxeItem;
@@ -88,6 +90,9 @@ public class Tree
             RenderTypeLookup.setRenderLayer(ModBlocks.FLOWER_OF_LIFE.get(), RenderType.getCutout());
 
             RenderTypeLookup.setRenderLayer(ModBlocks.HYACINTH.get(), RenderType.getCutout());
+
+            ScreenManager.registerFactory(ModContainers.LIGHTNING_CHANNELER_CONTAINER.get(),
+                    LightningChannelerScreen::new);
 
         });
     }
