@@ -12,7 +12,7 @@ import net.minecraft.util.text.ITextComponent;
 public class LightningChannelerScreen extends ContainerScreen<LightningChannelerContainer> {
 
     private final ResourceLocation GUI = new ResourceLocation(Tree.MOD_ID,
-            "textures/gui/lightning-channeler-gui.png");
+            "textures/gui/lightning_channeler_gui.png");
 
     public LightningChannelerScreen(LightningChannelerContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
