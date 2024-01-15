@@ -67,7 +67,7 @@ public class LightningChannelerBlock extends Block {
         return new INamedContainerProvider() {
             @Override
             public ITextComponent getDisplayName() {
-                return new TranslationTextComponent("screen.Tree.lightning_channeler");
+                return new TranslationTextComponent("screen.glowingtree.lightning_channeler");
             }
 
             @Nullable
