@@ -182,7 +182,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> HYACINTH = registerBlock("hyacinth",
             () -> new FlowerBlock(Effects.HASTE, 2, AbstractBlock.Properties.from(Blocks.DANDELION)));
 
-    public static final RegistryObject<Block> LIGHTNING_CHANNELER = registerBlock("lightning_channerler",
+    public static final RegistryObject<Block> LIGHTNING_CHANNELER = registerBlock("lightning_channeler",
             () -> new LightningChannelerBlock(AbstractBlock.Properties.create(Material.IRON)));
 
 
