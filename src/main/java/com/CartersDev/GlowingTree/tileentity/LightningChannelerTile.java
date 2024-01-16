@@ -26,6 +26,22 @@ public class LightningChannelerTile extends TileEntity {
         super(tileEntityTypeIn);
     }
 
+    public LightningChannelerTile() {
+        this(ModTileEntities.LIGHTNING_CHANNELER_TILE.get());
+    }
+
+    @Override
+    public void read(BlockState state, CompoundNBT nbt) {
+        itemHandler.deserializeNBT(nbt.getCompound("inv"));
+        super.read(state, nbt);
+    }
+
+    @Override
+    public CompoundNBT write(CompoundNBT compound) {
+        compound.put("inv", itemHandler.serializeNBT());
+        return super.write(compound);
+    }
+
     private ItemStackHandler createHandler() {
         return new ItemStackHandler(2) {
             @Override
@@ -43,8 +59,6 @@ public class LightningChannelerTile extends TileEntity {
                     default:
                         return false;
                 }
-
-
             }
 
             @Override
@@ -66,21 +80,8 @@ public class LightningChannelerTile extends TileEntity {
         };
     }
 
-    public LightningChannelerTile() {
-        this(ModTileEntities.LIGHTNING_CHANNELER_TILE.get());
-    }
 
-    @Override
-    public void read(BlockState state, CompoundNBT nbt) {
-        itemHandler.deserializeNBT(nbt.getCompound("inv"));
-        super.read(state, nbt);
-    }
 
-    @Override
-    public CompoundNBT write(CompoundNBT compound) {
-        compound.put("inv", itemHandler.serializeNBT());
-        return super.write(compound);
-    }
 
     @Nonnull
     @Override

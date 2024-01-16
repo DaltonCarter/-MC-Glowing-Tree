@@ -16,11 +16,9 @@ import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
 public class LightningChannelerContainer extends Container {
-
     private final TileEntity tileEntity;
     private final PlayerEntity playerEntity;
     private final IItemHandler playerInventory;
-
 
     public LightningChannelerContainer(int windowId, World world, BlockPos pos,
                                        PlayerInventory playerInventory, PlayerEntity player) {
@@ -28,28 +26,26 @@ public class LightningChannelerContainer extends Container {
         this.tileEntity = world.getTileEntity(pos);
         playerEntity = player;
         this.playerInventory = new InvWrapper(playerInventory);
-
         layoutPlayerInventorySlots(8, 86);
 
         if(tileEntity != null) {
             tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(h -> {
-                addSlot(new SlotItemHandler(h, 0,80, 31));
-                addSlot(new SlotItemHandler(h, 0,80, 53));
+                addSlot(new SlotItemHandler(h, 0, 80, 31));
+                addSlot(new SlotItemHandler(h, 1, 80, 53));
             });
         }
-
     }
 
     public boolean isLightningStorm() {
         return tileEntity.getWorld().isThundering();
     }
 
-
     @Override
     public boolean canInteractWith(PlayerEntity playerIn) {
         return isWithinUsableDistance(IWorldPosCallable.of(tileEntity.getWorld(), tileEntity.getPos()),
                 playerIn, ModBlocks.LIGHTNING_CHANNELER.get());
     }
+
 
     private int addSlotRange(IItemHandler handler, int index, int x, int y, int amount, int dx) {
         for (int i = 0; i < amount; i++) {
@@ -127,5 +123,4 @@ public class LightningChannelerContainer extends Container {
         sourceSlot.onTake(playerEntity, sourceStack);
         return copyOfSourceStack;
     }
-
 }
