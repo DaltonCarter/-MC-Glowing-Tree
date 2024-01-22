@@ -5,6 +5,7 @@ import com.CartersDev.GlowingTree.container.ModContainers;
 import com.CartersDev.GlowingTree.item.ModItems;
 import com.CartersDev.GlowingTree.screen.LightningChannelerScreen;
 import com.CartersDev.GlowingTree.tileentity.ModTileEntities;
+import com.CartersDev.GlowingTree.world.structure.structures.ModStructures;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -45,6 +46,8 @@ public class Tree
         ModBlocks.register(eventBus);
         ModTileEntities.register(eventBus);
         ModContainers.register(eventBus);
+        // call in constructor below the ModContainers.register call!
+        ModStructures.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -67,6 +70,9 @@ public class Tree
                     .put(ModBlocks.REDWOOD_WOOD.get(), ModBlocks.STRIPPED_REDWOOD_WOOD.get())
                     .put(ModBlocks.GLOWWOOD_LOG.get(), ModBlocks.STRIPPED_GLOWWOOD_LOG.get())
                     .put(ModBlocks.GLOWWOOD_WOOD.get(), ModBlocks.STRIPPED_GLOWWOOD_WOOD.get()).build();
+
+            // Add to the setup method inside the enqueueWork
+            ModStructures.setupStructures();
         });
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
