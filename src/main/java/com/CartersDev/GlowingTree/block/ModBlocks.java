@@ -2,6 +2,7 @@ package com.CartersDev.GlowingTree.block;
 
 import com.CartersDev.GlowingTree.Tree;
 import com.CartersDev.GlowingTree.block.custom.FirestoneBlock;
+import com.CartersDev.GlowingTree.block.custom.GlowingLeaves;
 import com.CartersDev.GlowingTree.block.custom.LightningChannelerBlock;
 import com.CartersDev.GlowingTree.block.custom.OatsBlock;
 import com.CartersDev.GlowingTree.block.custom.Trees.GlowwoodTree;
@@ -291,7 +292,7 @@ public class ModBlocks {
             });
 
     public static final RegistryObject<Block> GLOWWOOD_LEAVES = registerBlock("glowwood_leaves",
-            () -> new LeavesBlock((AbstractBlock.Properties.create(Material.LEAVES)
+            () -> new GlowingLeaves((AbstractBlock.Properties.create(Material.LEAVES)
                     .hardnessAndResistance(0.2f).tickRandomly().sound(SoundType.PLANT)
                     .notSolid().setLightLevel(glowLog)))
             {
