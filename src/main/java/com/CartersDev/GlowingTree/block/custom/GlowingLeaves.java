@@ -18,13 +18,10 @@ public class GlowingLeaves extends LeavesBlock {
     public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
         float chance = 0.35f;
         if(chance < rand.nextFloat()) {
-            worldIn.addParticle(ParticleTypes.FLAME, pos.getX() + rand.nextDouble(),
+            worldIn.addParticle(ParticleTypes.CRIT, pos.getX() + rand.nextDouble(),
                     pos.getY() + 0.5D, pos.getZ() + rand.nextDouble(),
                     0d, 0.05d, 0d);
 
-            worldIn.addParticle(new BlockParticleData(ParticleTypes.BLOCK, stateIn), pos.getX() + rand.nextDouble(),
-                    pos.getY() + 0.5D, pos.getZ() + rand.nextDouble(),
-                    0.0D, 0.05D, 0.0D);
         }
 
 
