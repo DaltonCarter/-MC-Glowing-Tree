@@ -30,7 +30,7 @@ import java.util.function.ToIntFunction;
 
 public class ModBlocks {
 
-    public static ToIntFunction<BlockState> glowLog = BlockState -> 7;
+    public static ToIntFunction<BlockState> glowLog = BlockState -> 10;
 
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, Tree.MOD_ID);
