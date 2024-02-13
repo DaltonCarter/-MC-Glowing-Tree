@@ -1,6 +1,7 @@
 package com.CartersDev.GlowingTree;
 
 import com.CartersDev.GlowingTree.block.ModBlocks;
+import com.CartersDev.GlowingTree.block.ModWoodTypes;
 import com.CartersDev.GlowingTree.container.ModContainers;
 import com.CartersDev.GlowingTree.item.ModItems;
 import com.CartersDev.GlowingTree.screen.LightningChannelerScreen;
@@ -9,15 +10,19 @@ import com.CartersDev.GlowingTree.world.structure.structures.ModStructures;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.WoodType;
 import net.minecraft.client.gui.ScreenManager;
+import net.minecraft.client.renderer.Atlases;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.tileentity.SignTileEntityRenderer;
 import net.minecraft.item.AxeItem;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -73,6 +78,7 @@ public class Tree
 
             // Add to the setup method inside the enqueueWork
             ModStructures.setupStructures();
+            WoodType.register(ModWoodTypes.REDWOOD);
         });
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
@@ -99,6 +105,11 @@ public class Tree
 
             ScreenManager.registerFactory(ModContainers.LIGHTNING_CHANNELER_CONTAINER.get(),
                     LightningChannelerScreen::new);
+
+            ClientRegistry.bindTileEntityRenderer(ModTileEntities.SIGN_TILE_ENTITIES.get(),
+                    SignTileEntityRenderer::new);
+
+            Atlases.addWoodType(ModWoodTypes.REDWOOD);
 
         });
     }

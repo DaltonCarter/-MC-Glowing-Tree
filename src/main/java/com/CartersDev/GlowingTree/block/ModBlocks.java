@@ -1,10 +1,7 @@
 package com.CartersDev.GlowingTree.block;
 
 import com.CartersDev.GlowingTree.Tree;
-import com.CartersDev.GlowingTree.block.custom.FirestoneBlock;
-import com.CartersDev.GlowingTree.block.custom.GlowingLeaves;
-import com.CartersDev.GlowingTree.block.custom.LightningChannelerBlock;
-import com.CartersDev.GlowingTree.block.custom.OatsBlock;
+import com.CartersDev.GlowingTree.block.custom.*;
 import com.CartersDev.GlowingTree.block.custom.Trees.GlowwoodTree;
 import com.CartersDev.GlowingTree.block.custom.Trees.RedwoodTree;
 import com.CartersDev.GlowingTree.item.ModItemGroup;
@@ -185,6 +182,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> LIGHTNING_CHANNELER = registerBlock("lightning_channeler",
             () -> new LightningChannelerBlock(AbstractBlock.Properties.create(Material.IRON)));
+
+    public static final RegistryObject<Block> REDWOOD_SIGN = BLOCKS.register("redwood_sign",
+            () -> new ModStandingSignBlock(AbstractBlock.Properties.create(Material.IRON), ModWoodTypes.REDWOOD));
+
+    public static final RegistryObject<Block> REDWOOD_WALL_SIGN = BLOCKS.register("redwood_wall_sign",
+            () -> new ModWallSignBlock(AbstractBlock.Properties.create(Material.IRON), ModWoodTypes.REDWOOD));
 
 
     //Off Tutorial Blocks

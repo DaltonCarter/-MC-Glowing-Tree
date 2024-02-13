@@ -20,6 +20,7 @@
   "item.glowingtree.glowwood_shovel" : "Glow-Wood Shovel",
   "item.glowingtree.glowwood_hoe": "Glow-Wood Hoe",
   "item.glowingtree.glowwood_sap": "Glow-Wood Sap",
+  "item.glowingtree.redwood_sign": "Redwood Sign",
 
   "block.glowingtree.amethyst_ore": "Amethyst Ore",
   "block.glowingtree.yokarite_ore": "Yokarite Ore",
@@ -57,6 +58,9 @@
   "block.glowingtree.flower_of_life": "Flower of Life",
   "block.glowingtree.hyacinth": "Hyacinth",
   "block.glowingtree.lightning_channeler": "Lightning Channeler",
+  "block.glowingtree.redwood_sign": "Redwood Sign",
+  "block.glowingtree.redwood_wall_sign": "Redwood Wall Sign",
+
 
 
   "screen.glowingtree.lightning_channeler": "Lightning Channeler",

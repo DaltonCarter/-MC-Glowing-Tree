@@ -67,6 +67,10 @@ public class ModItems {
             () -> new HorseArmorItem(9, "amethyst",
                     new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
 
+    public static final RegistryObject<Item> REDWOOD_SIGN = ITEMS.register("redwood_sign",
+            () -> new SignItem(new Item.Properties().maxStackSize(16).group(ModItemGroup.GLOWING_TREE),
+                    ModBlocks.REDWOOD_SIGN.get(), ModBlocks.REDWOOD_WALL_SIGN.get()));
+
 
 
 
