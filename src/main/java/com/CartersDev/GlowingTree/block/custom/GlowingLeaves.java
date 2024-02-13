@@ -19,7 +19,7 @@ public class GlowingLeaves extends LeavesBlock {
         float chance = 0.35f;
         if(chance < rand.nextFloat()) {
             worldIn.addParticle(ParticleTypes.CRIT, pos.getX() + rand.nextDouble(),
-                    pos.getY() + 0.5D, pos.getZ() + rand.nextDouble(),
+                    pos.getY() + -0.5D, pos.getZ() + rand.nextDouble(),
                     0d, 0.05d, 0d);
 
         }
