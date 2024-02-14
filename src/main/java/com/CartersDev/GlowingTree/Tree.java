@@ -115,6 +115,10 @@ public class Tree
             RenderTypeLookup.setRenderLayer(ModFluids.OIL_BLOCK.get(), RenderType.getTranslucent());
             RenderTypeLookup.setRenderLayer(ModFluids.OIL_FLOWING.get(), RenderType.getTranslucent());
 
+            RenderTypeLookup.setRenderLayer(ModFluids.TIBERIUM_FLUID.get(), RenderType.getTranslucent());
+            RenderTypeLookup.setRenderLayer(ModFluids.LIQUID_TIBERIUM_BLOCK.get(), RenderType.getTranslucent());
+            RenderTypeLookup.setRenderLayer(ModFluids.TIBERIUM_FLOWING.get(), RenderType.getTranslucent());
+
         });
     }
 
