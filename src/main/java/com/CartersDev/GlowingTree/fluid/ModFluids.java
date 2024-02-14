@@ -4,6 +4,7 @@ import com.CartersDev.GlowingTree.Tree;
 import com.CartersDev.GlowingTree.block.ModBlocks;
 import com.CartersDev.GlowingTree.item.ModItems;
 import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.fluid.FlowingFluid;
@@ -17,7 +18,11 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.function.ToIntFunction;
+
 public class ModFluids {
+
+    public static ToIntFunction<BlockState> liquid_tiberium = BlockState -> 10;
     public static final ResourceLocation WATER_STILL_RL = new ResourceLocation("block/water_still");
     public static final ResourceLocation WATER_FLOWING_RL = new ResourceLocation("block/water_flow");
     public static final ResourceLocation WATER_OVERLAY_RL = new ResourceLocation("block/water_overlay");
@@ -39,7 +44,7 @@ public static final RegistryObject<FlowingFluid> OIL_FLUID =
 
 public static final RegistryObject<FlowingFluidBlock> OIL_BLOCK = ModBlocks.BLOCKS.register("oil",
         () -> new FlowingFluidBlock(() -> ModFluids.OIL_FLUID.get(), AbstractBlock.Properties.create(Material.WATER)
-                .doesNotBlockMovement().hardnessAndResistance(100f).noDrops()));
+                .doesNotBlockMovement().hardnessAndResistance(100f).noDrops().setLightLevel(liquid_tiberium)));
 
 public static void register(IEventBus eventBus) {
         FLUIDS.register(eventBus);
