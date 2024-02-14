@@ -23,6 +23,7 @@
   "item.glowingtree.redwood_sign": "Redwood Sign",
   "item.glowingtree.oil_bucket": "Bucket of Oil",
   "item.glowingtree.amethyst_horse_armor": "Amethyst Horse Armor",
+  "item.glowingtree.tiberium_bucket": "Liquid Tiberium Bucket",
 
 
   "block.glowingtree.amethyst_ore": "Amethyst Ore",
@@ -66,6 +67,7 @@
 
 
   "fluid.glowingtree.oil": "Oil",
+  "fluid.glowingtree.liquid_tiberium": "Liquid Tiberium",
 
 
   "screen.glowingtree.lightning_channeler": "Lightning Channeler",

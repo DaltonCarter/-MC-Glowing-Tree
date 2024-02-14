@@ -126,8 +126,12 @@ public class ModItems {
     public static final RegistryObject<Item> TIBERIUM_BLUE = ITEMS.register("tiberium_blue",
             () -> new Item(new Item.Properties().group(ModItemGroup.GLOWING_TREE)));
 
+    public static final RegistryObject<Item> TIBERIUM_BUCKET = ITEMS.register("tiberium_bucket",
+            () -> new BucketItem(() -> ModFluids.TIBERIUM_FLUID.get(),
+                    new Item.Properties().maxStackSize(1).group(ModItemGroup.GLOWING_TREE)));
 
-    //end custom Itmes
+
+    //end custom Items
 
 
 
