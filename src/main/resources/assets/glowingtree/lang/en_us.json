@@ -21,6 +21,9 @@
   "item.glowingtree.glowwood_hoe": "Glow-Wood Hoe",
   "item.glowingtree.glowwood_sap": "Glow-Wood Sap",
   "item.glowingtree.redwood_sign": "Redwood Sign",
+  "item.glowingtree.oil_bucket": "Bucket of Oil",
+  "item.glowingtree.amethyst_horse_armor": "Amethyst Horse Armor",
+
 
   "block.glowingtree.amethyst_ore": "Amethyst Ore",
   "block.glowingtree.yokarite_ore": "Yokarite Ore",
@@ -62,19 +65,14 @@
   "block.glowingtree.redwood_wall_sign": "Redwood Wall Sign",
 
 
+  "fluid.glowingtree.oil": "Oil",
+
 
   "screen.glowingtree.lightning_channeler": "Lightning Channeler",
 
 
-
-
-
-
-
-
-
-
   "itemGroup.glowingTreeTab": "Glowing Tree",
+
 
   "tooltip.glowingtree.firestone": "Hold \u00A7e SHIFT \u00A7r for more information.",
   "tooltip.glowingtree.firestone_shift": "Might set you on fire, but might also protect from it!"

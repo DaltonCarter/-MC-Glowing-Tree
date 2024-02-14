@@ -2,6 +2,7 @@ package com.CartersDev.GlowingTree.item;
 
 import com.CartersDev.GlowingTree.Tree;
 import com.CartersDev.GlowingTree.block.ModBlocks;
+import com.CartersDev.GlowingTree.fluid.ModFluids;
 import com.CartersDev.GlowingTree.item.custom.Firestone;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -70,6 +71,10 @@ public class ModItems {
     public static final RegistryObject<Item> REDWOOD_SIGN = ITEMS.register("redwood_sign",
             () -> new SignItem(new Item.Properties().maxStackSize(16).group(ModItemGroup.GLOWING_TREE),
                     ModBlocks.REDWOOD_SIGN.get(), ModBlocks.REDWOOD_WALL_SIGN.get()));
+
+    public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket",
+            () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(),
+                    new Item.Properties().maxStackSize(1).group(ModItemGroup.GLOWING_TREE)));
 
 
 

@@ -3,6 +3,7 @@ package com.CartersDev.GlowingTree;
 import com.CartersDev.GlowingTree.block.ModBlocks;
 import com.CartersDev.GlowingTree.block.ModWoodTypes;
 import com.CartersDev.GlowingTree.container.ModContainers;
+import com.CartersDev.GlowingTree.fluid.ModFluids;
 import com.CartersDev.GlowingTree.item.ModItems;
 import com.CartersDev.GlowingTree.screen.LightningChannelerScreen;
 import com.CartersDev.GlowingTree.tileentity.ModTileEntities;
@@ -53,6 +54,7 @@ public class Tree
         ModContainers.register(eventBus);
         // call in constructor below the ModContainers.register call!
         ModStructures.register(eventBus);
+        ModFluids.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -101,8 +103,6 @@ public class Tree
             RenderTypeLookup.setRenderLayer(ModBlocks.GLOWWOOD_SAPLING.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.FLOWER_OF_LIFE.get(), RenderType.getCutout());
 
-            RenderTypeLookup.setRenderLayer(ModBlocks.HYACINTH.get(), RenderType.getCutout());
-
             ScreenManager.registerFactory(ModContainers.LIGHTNING_CHANNELER_CONTAINER.get(),
                     LightningChannelerScreen::new);
 
@@ -110,6 +110,10 @@ public class Tree
                     SignTileEntityRenderer::new);
 
             Atlases.addWoodType(ModWoodTypes.REDWOOD);
+
+            RenderTypeLookup.setRenderLayer(ModFluids.OIL_FLUID.get(), RenderType.getTranslucent());
+            RenderTypeLookup.setRenderLayer(ModFluids.OIL_BLOCK.get(), RenderType.getTranslucent());
+            RenderTypeLookup.setRenderLayer(ModFluids.OIL_FLOWING.get(), RenderType.getTranslucent());
 
         });
     }
