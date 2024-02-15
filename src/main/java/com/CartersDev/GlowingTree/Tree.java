@@ -3,6 +3,7 @@ package com.CartersDev.GlowingTree;
 import com.CartersDev.GlowingTree.block.ModBlocks;
 import com.CartersDev.GlowingTree.block.ModWoodTypes;
 import com.CartersDev.GlowingTree.container.ModContainers;
+import com.CartersDev.GlowingTree.data.recipes.ModRecipeTypes;
 import com.CartersDev.GlowingTree.fluid.ModFluids;
 import com.CartersDev.GlowingTree.item.ModItems;
 import com.CartersDev.GlowingTree.screen.LightningChannelerScreen;
@@ -55,6 +56,7 @@ public class Tree
         // call in constructor below the ModContainers.register call!
         ModStructures.register(eventBus);
         ModFluids.register(eventBus);
+        ModRecipeTypes.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading

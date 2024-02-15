@@ -38,25 +38,13 @@ public class LightningChannelerBlock extends Block {
         
         if(!worldIn.isRemote()) {
             TileEntity tileEntity = worldIn.getTileEntity(pos);
-            
-            if(!player.isCrouching()) {
-                if(tileEntity instanceof LightningChannelerTile) {
-                    INamedContainerProvider containerProvider = createContainerProvider(worldIn, pos);
 
-                    NetworkHooks.openGui(((ServerPlayerEntity) player), containerProvider, tileEntity.getPos());
-                } else {
-                    throw new IllegalStateException("You Must Construct Additional Pylons!! Our Container is missing!");
-                }
+            if(tileEntity instanceof LightningChannelerTile) {
+                INamedContainerProvider containerProvider = createContainerProvider(worldIn, pos);
 
+                NetworkHooks.openGui(((ServerPlayerEntity) player), containerProvider, tileEntity.getPos());
             } else {
-               if(tileEntity instanceof LightningChannelerTile) {
-                   if(worldIn.isThundering()){
-                       EntityType.LIGHTNING_BOLT.spawn(((ServerWorld) worldIn), null, player,
-                               pos, SpawnReason.TRIGGERED, true, true);
-
-                       ((LightningChannelerTile)tileEntity).lightningHasStruck();
-                   }
-               }
+                throw new IllegalStateException("You Must Construct Additional Pylons!! Our Container is missing!");
             }
         }
         

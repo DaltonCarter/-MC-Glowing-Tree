@@ -1,0 +1,15 @@
+{
+  "type": "glowingtree:lightning",
+  "weather": "clear",
+  "ingredients": [
+    {
+      "item": "glowingtree:amethyst"
+    },
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "output": {
+    "item": "glowingtree:amethyst_hoe"
+  }
+}
