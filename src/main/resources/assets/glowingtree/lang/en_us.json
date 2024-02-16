@@ -66,8 +66,8 @@
   "block.glowingtree.redwood_wall_sign": "Redwood Wall Sign",
 
 
-  "fluid.glowingtree.oil": "Oil",
-  "fluid.glowingtree.liquid_tiberium": "Liquid Tiberium",
+  "fluid.glowingtree.oil_fluid": "Oil",
+  "fluid.glowingtree.tiberium_fluid": "Liquid Tiberium",
 
 
   "screen.glowingtree.lightning_channeler": "Lightning Channeler",
