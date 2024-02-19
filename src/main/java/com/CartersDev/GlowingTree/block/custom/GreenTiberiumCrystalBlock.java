@@ -35,11 +35,6 @@ public static final IntegerProperty AGE = BlockStateProperties.AGE_0_7;
 
     }
 
-
-
-
-
-
     @Override
     protected IItemProvider getSeedsItem() {
         return ModItems.GREEN_TIBERIUM_DUST.get();
@@ -60,9 +55,5 @@ public static final IntegerProperty AGE = BlockStateProperties.AGE_0_7;
         if(worldIn.isRemote) {
             worldIn.setBlockState(pos, ModBlocks.GREEN_TIBERIUM_CROP.get().getDefaultState());}
     }
-
-
-
-
 
 }

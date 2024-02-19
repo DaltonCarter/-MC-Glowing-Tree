@@ -26,7 +26,9 @@ public class TiberiumSoil extends Block {
 
             if (aboveBlock == Blocks.AIR) {
                 worldIn.setBlockState(abovePos, ModBlocks.GREEN_TIBERIUM_CROP.get().getDefaultState());
+                //Chance to grow Blue Strain, Red Strain, and Purple Strain
             }
+            //Soil Spread logic
         }
     }
 
