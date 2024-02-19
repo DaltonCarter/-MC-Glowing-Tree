@@ -16,8 +16,6 @@ import net.minecraft.world.World;
 
 public class GreenTiberiumCrystalBlock extends CropsBlock {
 
-public static final IntegerProperty AGE = BlockStateProperties.AGE_0_7;
-
     private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
 
             Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 2.0D, 16.0D),
