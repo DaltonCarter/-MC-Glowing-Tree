@@ -220,6 +220,16 @@ public class ModBlocks {
     public static final RegistryObject<Block> FLOWER_OF_LIFE = registerBlock("flower_of_life",
             () -> new FlowerBlock(Effects.REGENERATION, 2, AbstractBlock.Properties.from(Blocks.DANDELION)));
 
+    public static final RegistryObject<Block> GREEN_TIBERIUM_CROP = BLOCKS.register("green_tiberium_crop",
+            () -> new GreenTiberiumCrystalBlock(AbstractBlock.Properties.create(Material.IRON)
+                    .harvestLevel(3).doesNotBlockMovement().harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool().hardnessAndResistance(5f).setLightLevel(glowLog)));
+
+    public static final RegistryObject<Block> TIBERIUM_SOIL = registerBlock("tiberium_soil",
+            () -> new TiberiumSoil(AbstractBlock.Properties.create(Material.EARTH)
+                    .harvestLevel(3).harvestTool(ToolType.SHOVEL).tickRandomly()
+                    .setRequiresTool().hardnessAndResistance(5f)));
+
     //end Off Tutorial Blocks
 
     //Glowing Tree

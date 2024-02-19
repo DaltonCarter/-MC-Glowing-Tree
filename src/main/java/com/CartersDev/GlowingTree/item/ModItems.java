@@ -6,6 +6,8 @@ import com.CartersDev.GlowingTree.fluid.ModFluids;
 import com.CartersDev.GlowingTree.item.custom.Firestone;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -129,6 +131,11 @@ public class ModItems {
     public static final RegistryObject<Item> TIBERIUM_BUCKET = ITEMS.register("tiberium_bucket",
             () -> new BucketItem(() -> ModFluids.TIBERIUM_FLUID.get(),
                     new Item.Properties().maxStackSize(1).group(ModItemGroup.GLOWING_TREE)));
+
+    public static final RegistryObject<Item> GREEN_TIBERIUM_DUST = ITEMS.register("green_tiberium_dust",
+            () -> new BlockItem(ModBlocks.GREEN_TIBERIUM_CROP.get(), new Item.Properties()
+                    .food(new Food.Builder().fastToEat().effect(() -> new EffectInstance(Effects.POISON, 100, 0), 1f)
+                            .build()).group(ModItemGroup.GLOWING_TREE)));
 
 
     //end custom Items

@@ -1,8 +1,8 @@
 {
   "item.glowingtree.amethyst": "Amethyst",
   "item.glowingtree.yokarite": "Yokarite",
-  "item.glowingtree.tiberium": "Tiberium",
-  "item.glowingtree.tiberium_blue": "Blue Tiberium",
+  "item.glowingtree.tiberium": "Riparius Tiberium Crystal",
+  "item.glowingtree.tiberium_blue": "Vinifera Tiberium Crystal",
   "item.glowingtree.firestone": "Firestone",
   "item.glowingtree.amethyst_axe": "Amethyst Axe",
   "item.glowingtree.amethyst_pickaxe": "Amethyst Pickaxe",
@@ -60,10 +60,11 @@
   "block.glowingtree.glowwood_slab": "Glow-Wood Slab",
   "block.glowingtree.hyacinth": "Hyacinth",
   "block.glowingtree.flower_of_life": "Flower of Life",
-  "block.glowingtree.hyacinth": "Hyacinth",
   "block.glowingtree.lightning_channeler": "Lightning Channeler",
   "block.glowingtree.redwood_sign": "Redwood Sign",
   "block.glowingtree.redwood_wall_sign": "Redwood Wall Sign",
+  "block.glowingtree.green_tiberium_crop": "Riparius Tiberium Dust",
+  "block.glowingtree.tiberium_soil": "Tiberium Soil",
 
 
   "fluid.glowingtree.oil_fluid": "Oil",
