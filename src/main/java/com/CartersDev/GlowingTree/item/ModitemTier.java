@@ -8,8 +8,8 @@ import java.util.function.Supplier;
 
 public enum ModitemTier implements IItemTier {
 
-   AMETHYST(3, 150, 4f,12f, 10,
-           () -> Ingredient.fromItems(ModItems.AMETHYST.get())) ;
+   GLOWWOOD(3, 150, 4f,12f, 10,
+           () -> Ingredient.fromItems(ModItems.GLOWWOOD_SAP.get())) ;
 
 
     private final int harvestLevel;

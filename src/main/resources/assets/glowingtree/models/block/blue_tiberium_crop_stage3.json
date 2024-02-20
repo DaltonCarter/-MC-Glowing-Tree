@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/crop",
-  "textures": {
-    "crop": "glowingtree:block/blue_tiberium_crop_stage3"
-  }
-}

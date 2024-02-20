@@ -26,28 +26,7 @@
   "item.glowingtree.tiberium_bucket": "Liquid Tiberium Bucket",
 
 
-  "block.glowingtree.amethyst_ore": "Amethyst Ore",
-  "block.glowingtree.yokarite_ore": "Yokarite Ore",
-  "block.glowingtree.tiberium_ore": "Tiberium Ore",
-  "block.glowingtree.amethyst_block": "Amethyst Block",
-  "block.glowingtree.yokarite_block": "Yokarite Block",
-  "block.glowingtree.tiberium_block": "Tiberium Block",
-  "block.glowingtree.tiberium_blue_block": "Blue Tiberium Block",
-  "block.glowingtree.firestone_block": "Firestone Block",
-  "block.glowingtree.amethyst_stairs": "Amethyst Stairs",
-  "block.glowingtree.amethyst_fence": "Amethyst Fence",
-  "block.glowingtree.amethyst_fence_gate": "Amethyst Fence Gate",
-  "block.glowingtree.amethyst_slab": "Amethyst Slab",
-  "block.glowingtree.amethyst_button": "Amethyst button",
-  "block.glowingtree.amethyst_pressure_plate": "Amethyst Pressure Plate",
-  "block.glowingtree.amethyst_door": "Amethyst Door",
-  "block.glowingtree.amethyst_trapdoor": "Amethyst Trapdoor",
-  "block.glowingtree.oats_crop": "Oats",
-  "block.glowingtree.redwood_log": "Redwood Log",
-  "block.glowingtree.redwood_planks": "Redwood Planks",
-  "block.glowingtree.redwood_wood": "Redwood Wood",
-  "block.glowingtree.stripped_redwood_log": "Stripped Redwood Log",
-  "block.glowingtree.stripped_redwood_wood": "Stripped Redwood Wood",
+
   "block.glowingtree.glowwood_log": "Glow-Wood Log",
   "block.glowingtree.glowwood_planks": "Glow-Wood Planks",
   "block.glowingtree.glowwood_wood": "Glow-Wood Wood",
@@ -55,29 +34,11 @@
   "block.glowingtree.stripped_glowwood_wood": "Stripped Glow-Wood Wood",
   "block.glowingtree.glowwood_leaves": "Glow-Wood Leaves",
   "block.glowingtree.glowwood_sapling": "Glow-Wood Sapling",
-  "block.glowingtree.redwood_leaves": "Redwood Leaves",
-  "block.glowingtree.redwood_sapling": "Redwood Sapling",
   "block.glowingtree.glowwood_slab": "Glow-Wood Slab",
-  "block.glowingtree.hyacinth": "Hyacinth",
   "block.glowingtree.flower_of_life": "Flower of Life",
-  "block.glowingtree.lightning_channeler": "Lightning Channeler",
-  "block.glowingtree.redwood_sign": "Redwood Sign",
-  "block.glowingtree.redwood_wall_sign": "Redwood Wall Sign",
-  "block.glowingtree.green_tiberium_crop": "Riparius Tiberium Dust",
-  "block.glowingtree.tiberium_soil": "Tiberium Soil",
-  "block.glowingtree.blue_tiberium_crop": "Vinifera Tiberium Dust",
 
 
-  "fluid.glowingtree.oil_fluid": "Oil",
-  "fluid.glowingtree.tiberium_fluid": "Liquid Tiberium",
 
+  "itemGroup.GlowingTreeTab": "Glowing Tree"
 
-  "screen.glowingtree.lightning_channeler": "Lightning Channeler",
-
-
-  "itemGroup.glowingTreeTab": "Glowing Tree",
-
-
-  "tooltip.glowingtree.firestone": "Hold \u00A7e SHIFT \u00A7r for more information.",
-  "tooltip.glowingtree.firestone_shift": "Might set you on fire, but might also protect from it!"
 }

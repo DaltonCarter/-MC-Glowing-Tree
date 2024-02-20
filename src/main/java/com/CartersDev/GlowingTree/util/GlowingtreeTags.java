@@ -12,31 +12,19 @@ public class GlowingtreeTags {
 
     public static class Blocks {
 
-        public static final Tags.IOptionalNamedTag<Block> FIRESTONE_CLICKABLE_BLOCKS =
-                createTag("firestone_clickable_blocks");
 
-        private static Tags.IOptionalNamedTag<Block> createTag(String name) {
-            return BlockTags.createOptional(new ResourceLocation(Tree.MOD_ID, name));
-        }
+        public static class Items {
 
-        private static Tags.IOptionalNamedTag<Block> createForgeTag(String name) {
-            return BlockTags.createOptional(new ResourceLocation("forge", name));
-        }
 
-    }
+            private static Tags.IOptionalNamedTag<Item> createTag(String name) {
+                return ItemTags.createOptional(new ResourceLocation(Tree.MOD_ID, name));
+            }
 
-    public static class Items {
+            private static Tags.IOptionalNamedTag<Item> createForgeTag(String name) {
+                return ItemTags.createOptional(new ResourceLocation("forge", name));
+            }
 
-        public static final Tags.IOptionalNamedTag<Item> AMETHYST = createForgeTag("gems/amethyst");
-
-        private static Tags.IOptionalNamedTag<Item> createTag(String name) {
-            return ItemTags.createOptional(new ResourceLocation(Tree.MOD_ID, name));
-        }
-
-        private static Tags.IOptionalNamedTag<Item> createForgeTag(String name) {
-            return ItemTags.createOptional(new ResourceLocation("forge", name));
         }
 
     }
-
 }

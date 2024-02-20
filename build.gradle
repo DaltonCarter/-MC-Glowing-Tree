@@ -30,10 +30,6 @@ repositories {
         url = "https://modmaven.k-4u.nl"
     }
 
-
-
-
-
 }
 
 
@@ -142,14 +138,6 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.121:api")
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.121")
-
-
-
-
-
-
-
-
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"

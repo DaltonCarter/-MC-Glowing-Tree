@@ -27,20 +27,6 @@ public class ModTreeGeneration {
             List<Supplier<ConfiguredFeature<?, ?>>> base =
                     event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-            base.add(() -> ModConfiguredFeatures.REDWOOD
-                    .withPlacement((Features.Placements.HEIGHTMAP_PLACEMENT)
-                            .withPlacement(Placement.COUNT_EXTRA.configure(
-                                    new AtSurfaceWithExtraConfig(1,0.25f,2)
-                            ))));
-
-
-
-        }
-
-        if(types.contains(BiomeDictionary.Type.PLAINS)){
-            List<Supplier<ConfiguredFeature<?, ?>>> base =
-                    event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
-
             base.add(() -> ModConfiguredFeatures.GLOWWOOD
                     .withPlacement((Features.Placements.HEIGHTMAP_PLACEMENT)
                             .withPlacement(Placement.COUNT_EXTRA.configure(
