@@ -137,6 +137,11 @@ public class ModItems {
                     .food(new Food.Builder().fastToEat().effect(() -> new EffectInstance(Effects.POISON, 100, 0), 1f)
                             .build()).group(ModItemGroup.GLOWING_TREE)));
 
+    public static final RegistryObject<Item> BLUE_TIBERIUM_DUST = ITEMS.register("blue_tiberium_dust",
+            () -> new BlockItem(ModBlocks.BLUE_TIBERIUM_CROP.get(), new Item.Properties()
+                    .food(new Food.Builder().fastToEat().effect(() -> new EffectInstance(Effects.POISON, 100, 2), 1f)
+                            .build()).group(ModItemGroup.GLOWING_TREE)));
+
 
     //end custom Items
 

@@ -8,5 +8,8 @@ public class ModWoodTypes {
     public static final WoodType REDWOOD =
             WoodType.create(new ResourceLocation(Tree.MOD_ID, "redwood").toString());
 
+    public static final WoodType GLOWWOOD =
+            WoodType.create(new ResourceLocation(Tree.MOD_ID, "glowwood").toString());
+
 
 }

@@ -230,6 +230,11 @@ public class ModBlocks {
                     .harvestLevel(3).harvestTool(ToolType.SHOVEL).tickRandomly()
                     .setRequiresTool().hardnessAndResistance(5f)));
 
+    public static final RegistryObject<Block> BLUE_TIBERIUM_CROP = BLOCKS.register("blue_tiberium_crop",
+            () -> new BlueTiberiumCrystalBlock(AbstractBlock.Properties.create(Material.IRON)
+                    .harvestLevel(3).doesNotBlockMovement().harvestTool(ToolType.PICKAXE)
+                    .setRequiresTool().hardnessAndResistance(5f).setLightLevel(glowLog)));
+
     //end Off Tutorial Blocks
 
     //Glowing Tree

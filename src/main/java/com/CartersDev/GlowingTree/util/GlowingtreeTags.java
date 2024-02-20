@@ -1,4 +1,4 @@
-package com.CartersDev.GlowingTree.item.custom;
+package com.CartersDev.GlowingTree.util;
 
 import com.CartersDev.GlowingTree.Tree;
 import net.minecraft.block.Block;

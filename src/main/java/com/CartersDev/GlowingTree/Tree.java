@@ -96,6 +96,7 @@ public class Tree
 
             RenderTypeLookup.setRenderLayer(ModBlocks.OATS.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.GREEN_TIBERIUM_CROP.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(ModBlocks.BLUE_TIBERIUM_CROP.get(), RenderType.getCutout());
 
             RenderTypeLookup.setRenderLayer(ModBlocks.REDWOOD_LEAVES.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.REDWOOD_SAPLING.get(), RenderType.getCutout());
